@@ -14,8 +14,6 @@ from streamlit_option_menu import option_menu
 
 diabetes_model = pickle.load(open('C:/Users/BHAVYA HARIKA/OneDrive/Desktop/project/diabetes.sav', 'rb'))
 
-
-
 parkinsons_model = pickle.load(open('C:/Users/BHAVYA HARIKA/OneDrive/Desktop/project/parkinsons.sav', 'rb'))
 
 
@@ -24,20 +22,16 @@ parkinsons_model = pickle.load(open('C:/Users/BHAVYA HARIKA/OneDrive/Desktop/pro
 with st.sidebar:
     
     selected = option_menu('Multiple Disease Prediction System',
-                          
-                          ['Diabetes Prediction',
-                           
+                           ['Diabetes Prediction',
                            'Parkinsons Prediction'],
                           icons=['activity','heart','person'],
                           default_index=0)
-    
     
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     
     # page title
     st.title('Diabetes Prediction using ML')
-    
     
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
